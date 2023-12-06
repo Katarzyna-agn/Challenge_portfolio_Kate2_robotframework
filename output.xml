@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231206 23:44:53.788" rpa="false" schemaversion="4">
+<suite id="s1" name="Challenge portfolio kate2 robotframework" source="C:\Projects\Challenge_portfolio_kate2_robotframework">
+<suite id="s1-s1" name="Robot Test" source="C:\Projects\Challenge_portfolio_kate2_robotframework\robot_test.robot">
+<test id="s1-s1-t1" name="change language TC03" line="48">
+<kw name="Open login page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231206 23:44:54.867" level="INFO">Opening browser 'Chrome' to base url 'https://scouts-test.futbolkolektyw.pl/en'.</msg>
+<status status="PASS" starttime="20231206 23:44:54.867" endtime="20231206 23:45:21.079"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel - sign in</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 23:45:21.275" level="INFO">Page title is 'Scouts panel - sign in'.</msg>
+<status status="PASS" starttime="20231206 23:45:21.079" endtime="20231206 23:45:21.276"/>
+</kw>
+<status status="PASS" starttime="20231206 23:44:54.867" endtime="20231206 23:45:21.276"/>
+</kw>
+<kw name="Change language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CHANGELANGUAGE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 23:45:21.281" level="INFO">Clicking element 'xpath=//div[2]/div/div'.</msg>
+<status status="PASS" starttime="20231206 23:45:21.278" endtime="20231206 23:45:22.619"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${POLISHOPTIONXPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 23:45:22.620" level="INFO">Clicking element 'xpath=//div[3]/ul/li[1]'.</msg>
+<status status="PASS" starttime="20231206 23:45:22.619" endtime="20231206 23:45:22.737"/>
+</kw>
+<status status="PASS" starttime="20231206 23:45:21.277" endtime="20231206 23:45:22.737"/>
+</kw>
+<kw name="Change language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CHANGELANGUAGE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 23:45:22.738" level="INFO">Clicking element 'xpath=//div[2]/div/div'.</msg>
+<status status="PASS" starttime="20231206 23:45:22.738" endtime="20231206 23:45:22.972"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${POLISHOPTIONXPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 23:45:22.973" level="INFO">Clicking element 'xpath=//div[3]/ul/li[1]'.</msg>
+<status status="PASS" starttime="20231206 23:45:22.972" endtime="20231206 23:45:23.045"/>
+</kw>
+<status status="PASS" starttime="20231206 23:45:22.737" endtime="20231206 23:45:23.045"/>
+</kw>
+<kw name="Assert LoginPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${REMINDPASSWORD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231206 23:45:23.047" endtime="20231206 23:45:23.228"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel - zaloguj</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231206 23:45:23.236" level="INFO">Page title is 'Scouts panel - zaloguj'.</msg>
+<status status="PASS" starttime="20231206 23:45:23.229" endtime="20231206 23:45:23.236"/>
+</kw>
+<status status="PASS" starttime="20231206 23:45:23.047" endtime="20231206 23:45:23.236"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231206 23:45:23.237" endtime="20231206 23:45:27.368"/>
+</kw>
+<status status="PASS" starttime="20231206 23:44:54.867" endtime="20231206 23:45:27.368"/>
+</test>
+<doc>Suite description #automated tests for scout website</doc>
+<status status="PASS" starttime="20231206 23:44:53.819" endtime="20231206 23:45:27.368"/>
+</suite>
+<status status="PASS" starttime="20231206 23:44:53.788" endtime="20231206 23:45:27.368"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Challenge portfolio kate2 robotframework">Challenge portfolio kate2 robotframework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Robot Test">Challenge portfolio kate2 robotframework.Robot Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
