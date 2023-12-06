@@ -57,8 +57,8 @@ dasboard addplayer TC04
     Type in email
     Type in password
     Click on the Sign in button
-    Click on the Addplayer
     Assert Dashboard
+    Click on the Addplayer
     Assert Addplayer
     [Teardown]        Close Browser
 
@@ -67,14 +67,14 @@ fill add player form req TC05
     Type in email
     Type in password
     Click on the Sign in button
+    Assert Dashboard
     Click on the Addplayer
+    Assert Addplayer
     Type_in_name
     Type in surname
     Type in age
     Type in main position
     Click on the sumbit button
-    Assert Dashboard
-    Assert Addplayer
     Assert Editplayer
     [Teardown]        Close Browser
 
@@ -118,11 +118,11 @@ Assert Remind password
      Title Should Be        Remind password
      Capture Page Screenshot          alert.png
 Assert Addplayer
-     Wait Until Element Is Visible        ${PLAYEREMAIL}
+     Wait Until Element Is Visible        ${MAINPAGE}
      Title Should Be        Add player
      Capture Page Screenshot          alert.png
 Assert Editplayer
-     Wait Until Element Is Visible        ${PLAYEREMAIL}
+     Wait Until Element Is Visible        ${MAINPAGE}
      Title Should Be        Edit player John Bianco
      Capture Page Screenshot          alert.png
 
