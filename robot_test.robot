@@ -17,7 +17,6 @@ ${REMINDPASSWORDTEXT}        xpath=//div[1]/h5
 ${POLISHOPTIONXPATH}        xpath=//div[3]/ul/li[1]
 ${PAGETEXT}        xpath=//div[1]/h5
 ${ADDPLAYER}        xpath=//div[2]/div/div/a/button/span[1]
-${PLAYEREMAIL}        xpath=//*[@name='email']
 ${NAMEINPUT}        xpath=//*[@name ='name']
 ${SURNAMEINPUT}        xpath=//*[@name ='surname']
 ${AGEINPUT}        xpath=//*[@name ='age']
