@@ -9,7 +9,7 @@ ${BROWSER}        Chrome
 ${EMAILINPUT}       xpath=//*[@id='login']
 ${PASSWORDINPUT}        xpath=//*[@id='password']
 ${SIGNINBUTTON}     xpath=//*[@type='submit']
-${PAGELOGO}        xpath=//*[@title = 'Logo Scouts Panel']
+${MAINPAGE}        xpath=//ul[1]/div[1]/div[2]/span
 ${REMINDPASSWORD URL}        https://scouts-test.futbolkolektyw.pl/en/remind'
 ${REMINDPASSWORD}        xpath=//div[1]/a
 ${CHANGELANGUAGE}        xpath=//div[2]/div/div
@@ -22,7 +22,7 @@ ${NAMEINPUT}        xpath=//*[@name ='name']
 ${SURNAMEINPUT}        xpath=//*[@name ='surname']
 ${AGEINPUT}        xpath=//*[@name ='age']
 ${MAINPOSITIONINPUT}        xpath=//*[@name='mainPosition']
-${SUBMITBUTTON}        //*[@type ='submit']
+${SUBMITBUTTON}        xpath=//*[@type ='submit']
 
 
 
@@ -110,7 +110,7 @@ Assert LoginPage
     Wait Until Element Is Visible        ${REMINDPASSWORD}
     Title Should Be        Scouts panel - zaloguj
 Assert Dashboard
-    Wait Until Element Is Visible            ${PAGELOGO}
+    Wait Until Element Is Visible            ${MAINPAGE}
     Title Should Be        Scouts panel
     Capture Page Screenshot          alert.png
 Assert Remind password
