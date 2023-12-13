@@ -49,7 +49,6 @@ login to the system TC01
     Type in email LP
     Type in password
     Click on the Sign in button
-    Sleep        5s
     Assert dashboard
     [Teardown]        Close Browser
 
@@ -74,9 +73,7 @@ dasboard addplayer TC04
     Type in email LP
     Type in password
     Click on the Sign in button
-    Sleep        2s
     Click on the Addplayer
-    Sleep        2s
     Assert Addplayer
     [Teardown]        Close Browser
 
@@ -85,15 +82,12 @@ fill add player form req TC05
     Type in email LP
     Type in password
     Click on the Sign in button
-    Sleep        5s
     Click on the Addplayer
-    Sleep        5s
     Type in name
     Type in surname
     Type in age
     Type in main position
     Click on the sumbit button
-    Sleep        5s
     Assert Editplayer
     [Teardown]        Close Browser
 
@@ -102,9 +96,7 @@ fill add player form req TC06
     Type In Email LP
     Type in password
     Click on the Sign in button
-    Sleep        2s
     Click on the Addplayer
-    Sleep        4s
     Type in email AP
     Type in name
     Type in surname
@@ -125,7 +117,6 @@ fill add player form req TC06
     Type in 90minut
     Type in facebook
     Click on the sumbit button
-    Sleep        2s
     Assert Editplayer
     [Teardown]        Close Browser
 
