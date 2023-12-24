@@ -40,20 +40,27 @@ ${LACZYNASPILKAINPUT}        xpath=//*[@name='webLaczy']
 ${90MINUTINPUT}        xpath=//*[@name='web90']
 ${FACEBOOKINPUT}        xpath=//*[@name='webFB']
 ${SUBMITBUTTON}        xpath=//*[@type ='submit']
+${DASHBOARDPAGE HEADER}        xpath=//div[2]/h2
 
 
 *** Test Cases ***
-login to the system TC01
+login page header name TC01
     Open Login Page
     Check LoginPage Text
+    [Teardown]        Close Browser
+
+
+login to the system TC02
+    Open Login Page
     Type in email LP
     Type in password
     Click on the Sign in button
+    Sleep        5s
     Assert dashboard
     [Teardown]        Close Browser
 
 
-remind password TC02
+remind password TC03
     Open login page
     Type in email LP
     Click On The Remind Password
@@ -61,14 +68,27 @@ remind password TC02
     [Teardown]        Close Browser
 
 
-change language TC03
+change language TC04
     Open login page
     Change Language
     Change language
     Assert LoginPage
     [Teardown]        Close Browser
 
-dasboard addplayer TC04
+
+dasboard header name TC05
+    Open Login Page
+    Type in email LP
+    Type in password
+    Click on the Sign in button
+    Sleep        5s
+    Check DashboardPage Header
+    Sleep        5s
+    Assert Dashboard
+    [Teardown]        Close Browser
+
+
+dasboard addplayer TC06
     Open Login Page
     Type in email LP
     Type in password
@@ -77,7 +97,8 @@ dasboard addplayer TC04
     Assert Addplayer
     [Teardown]        Close Browser
 
-fill add player form req TC05
+
+fill add player form req TC055555555
     Open Login Page
     Type in email LP
     Type in password
@@ -91,7 +112,7 @@ fill add player form req TC05
     Assert Editplayer
     [Teardown]        Close Browser
 
-fill add player form req TC06
+fill add player form req TC07
     Open Login Page
     Type In Email LP
     Type in password
@@ -119,6 +140,8 @@ fill add player form req TC06
     Click on the sumbit button
     Assert Editplayer
     [Teardown]        Close Browser
+
+
 
 
 *** Keywords ***
@@ -186,6 +209,9 @@ Type in facebook
 Click on the sumbit button
     Click Element        ${SUBMITBUTTON}
     Wait Until Element Is Visible            ${MAINPAGE}
+Check DashboardPage Header
+    Wait Until Element Is Visible        ${DASHBOARDPAGE HEADER}
+    Element Text Should Be        ${DASHBOARDPAGE HEADER}        Scouts panel
 Assert LoginPage
     Wait Until Element Is Visible        ${REMINDPASSWORD}
     Title Should Be        Scouts panel - zaloguj
